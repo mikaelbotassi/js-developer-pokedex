@@ -8,74 +8,92 @@
 
 .normal {
     background-color: #a6a877;
+    background: linear-gradient(135deg, #1e1e1e 0%, #a6a877 100%);
 }
 
 .grass {
     background-color: #77c850;
+    background: linear-gradient(135deg, #1e1e1e 0%, #77c850 100%);
 }
 
 .fire {
     background-color: #ee7f30;
+    background: linear-gradient(135deg, #1e1e1e 0%, #ee7f30 100%);
 }
 
 .water {
     background-color: #678fee;
+    background: linear-gradient(135deg, #1e1e1e 0%, #678fee 100%);
 }
 
 .electric {
     background-color: #f7cf2e;
+    background: linear-gradient(135deg, #1e1e1e 0%, #f7cf2e 100%);
 }
 
 .ice {
     background-color: #98d5d7;
+    background: linear-gradient(135deg, #1e1e1e 0%, #98d5d7 100%);
 }
 
 .ground {
     background-color: #dfbf69;
+    background: linear-gradient(135deg, #1e1e1e 0%, #dfbf69 100%);
 }
 
 .flying {
     background-color: #a98ff0;
+    background: linear-gradient(135deg, #1e1e1e 0%, #a98ff0 100%);
 }
 
 .poison {
     background-color: #a040a0;
+    background: linear-gradient(135deg, #1e1e1e 0%, #a040a0 100%);
 }
 
 .fighting {
     background-color: #bf3029;
+    background: linear-gradient(135deg, #1e1e1e 0%, #bf3029 100%);
 }
 
 .psychic {
     background-color: #f65687;
+    background: linear-gradient(135deg, #1e1e1e 0%, #f65687 100%);
 }
 
 .dark {
     background-color: #725847;
+    background: linear-gradient(135deg, #1e1e1e 0%, #725847 100%);
 }
 
 .rock {
     background-color: #b8a137;
+    background: linear-gradient(135deg, #1e1e1e 0%, #b8a137 100%);
 }
 
 .bug {
     background-color: #a8b720;
+    background: linear-gradient(135deg, #1e1e1e 0%, #a8b720 100%);
 }
 
 .ghost {
     background-color: #6e5896;
+    background: linear-gradient(135deg, #1e1e1e 0%, #6e5896 100%);
 }
 
 .steel {
     background-color: #b9b7cf;
+    background: linear-gradient(135deg, #1e1e1e 0%, #b9b7cf 100%);
 }
 
 .dragon {
     background-color: #6f38f6;
+    background: linear-gradient(135deg, #1e1e1e 0%, #6f38f6 100%);
 }
 
 .fairy {
     background-color: #f9aec7;
+    background: linear-gradient(135deg, #1e1e1e 0%, #f9aec7 100%);
 }
 
 .pokemon {
@@ -83,14 +101,40 @@
     flex-direction: column;
     margin: .5rem;
     padding: 1rem;
+    position:relative;
     border-radius: 1rem;
+}
+
+.toggleModal{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
 }
 
 .pokemon .number {
     color: #000;
-    opacity: .3;
     text-align: right;
     font-size: .625rem;
+}
+
+.pokemon .number .number-card {
+    background-color:rgba(0,0,0,.5);
+    color:#fff;
+    border-radius:5rem;
+    overflow:hidden;
+}
+
+.pokemon .number .number-code {
+    padding: .25rem .25rem;
+}
+
+.pokemon .number .fa-solid.fa-hashtag {
+    background-color:#fff;
+    color:#333;
+    border-radius:5rem;
+    padding: .1rem .2rem;
 }
 
 .pokemon .name {
@@ -136,15 +180,29 @@
     padding: 1rem;
 }
 
-.pagination button {
-    padding: .25rem .5rem;
-    margin: .25rem 0;
-    font-size: .625rem;
+         
+         
+         
+.btn-grad {
+    background-image: linear-gradient(to right, #000000 0%, #53346D  51%, #000000  100%);
+    margin: 10px;
+    padding: .5rem .75rem;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 5rem;
+    display: block;
+    font-size: .75rem;
+    border:none;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
     color: #fff;
-    background-color: #6c79db;
-    border: none;
-    border-radius: 1rem;
-}
+    text-decoration: none;
+    cursor:pointer;
+  }
 
 @media screen and (min-width: 380px) {
     .pokemons {
@@ -163,3 +221,158 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding: 2rem 0; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #5cb85c;
+    margin: auto;
+    padding: 0;
+    width: 20vw;
+    border-radius:1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding:1rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    color:#fff
+  }
+  
+.pokemon-style{
+    padding: .5rem 1.5rem;
+}
+
+.modal-pokemon-types{ list-style:none; margin-top: .25rem; }
+.modal-pokemon-types li{
+    background-color:rgba(255,255,255,.1);
+    padding: .25rem .5rem;
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+}
+
+.modal-pokemon-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -2rem;
+}
+
+.modal-pokemon-img img{
+    max-width:60%;
+}
+
+.modal-details{
+    background-color:#fff;
+    padding:1rem;
+    border-radius:1rem;
+    color:#3f3f3f
+}
+
+.modal-details ul{
+    list-style:none;
+    padding:0
+}
+
+.modal-details ul li span:first-of-type{
+    color:#616161cc
+}
+
+.modal-details ul li{
+    margin-bottom:1rem;
+}
+
+.fs-1{
+    font-size:2rem;
+}
+.fs-2{
+    font-size:1.5rem;
+}
+.fs-3{
+    font-size:1rem;
+}
+.fs-4{
+    font-size:.75rem;
+}
+.fs-5{
+    font-size:.5rem;
+}
+.fs-6{
+    font-size:.25rem;
+}
+
+.fw-normal{
+    font-weight:normal;
+}
+
+.fa-solid.fa-mars-stroke{ color:#417dff }
+.fa-solid.fa-venus{ color:#ff55eb }
+
+
+@media screen and (max-width: 380px) { 
+    .modal-content {
+        width: 70vw !important;
+    }
+ }
+
+@media screen and (min-width: 380px) and (max-width: 575.98px) { 
+    .modal-content {
+        width: 50vw !important;
+    }
+ }
+
+@media screen and (min-width: 576px) and (max-width: 767.98px) { 
+    .modal-content {
+        width: 40vw !important;
+    }
+ }
+
+ @media screen and (min-width:768px) and (max-width: 991.98px) { 
+    .modal-content {
+        width: 30vw !important;
+    }
+ }
+ 
+ @media screen and (min-width:992px) and (max-width: 1199.98px) { 
+    .modal-content {
+        width: 25vw !important;
+    }
+ }

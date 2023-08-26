@@ -1,17 +1,32 @@
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #f6f8fc;
+    background: rgb(30,30,30);
+background: linear-gradient(135deg, rgba(30,30,30,1) 0%, rgba(61,0,87,1) 100%);
 }
+
+.title{
+    color:#fff;
+    text-align:center;
+    font-size: 3rem;
+    margin:0;
+}
+
+.mt-5{ margin-top: 2rem }
+
+.mb-5{ margin-bottom: 2rem }
 
 .content {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+    background-color: rgba(255,255,255,.3);
+    border: 2px solid #fff;
+    animation: mymove 30s infinite;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
 }
 
 @media screen and (min-width: 992px) {
@@ -22,3 +37,63 @@ body {
         border-radius: 1rem;
     }
 }
+
+.d-flex{ display:flex }
+
+.flex-column{ flex-direction:column }
+
+.align-items-center{ align-items:center }
+
+.align-items-start{ align-items:flex-start }
+
+.justify-content-center{ justify-content:center }
+
+.justify-content-between{ justify-content:space-between }
+
+.gap-5{ gap:2rem }
+.gap-3{ gap:1rem }
+.gap-1{ gap:.25rem }
+
+.m-0{ margin:0 }
+
+.p-0{ padding:0 }
+
+.text-white{ color:white }
+
+@keyframes mymove {
+    5% {border-color: #77c850;}
+    10% {border-color: lightblue;}
+    15% {border-color: #ee7f30;}
+    20% {border-color: #678fee;}
+    25% {border-color: #f7cf2e;}
+    30% {border-color: #98d5d7;}
+    35% {border-color: #dfbf69;}
+    40% {border-color: #a98ff0;}
+    45% {border-color: #a040a0;}
+    50% {border-color: #bf3029;}
+    55% {border-color: #f65687;}
+    60% {border-color: #b8a137;}
+    65% {border-color: #a8b720;}
+    70% {border-color: #6e5896;}
+    85% {border-color: #6f38f6;}
+    100% {border-color: #f9aec7;}
+}
+
+::-webkit-scrollbar { 
+    padding: 1px;
+    background: transparent;
+    height: .5rem;
+    width: .5rem }
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb { 
+    padding: 3px }
+
+::-webkit-scrollbar-thumb {
+    background: #dc8efe;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #2b003d;
+}
+
+.text-decoration-none{ text-decoration:none; color:#fff }
